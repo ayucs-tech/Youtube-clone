@@ -5,9 +5,9 @@ import Head from './components/Head';
 import Watchpage from './components/Watchpage';
 import store from './utils/store';
 import MainContainer from './components/MainContainer';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path: "/",
     element: <Body />,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice';
 import { YT_SEARCH } from '../utils/constants';
+import { Link } from 'react-router-dom';
 
 const Head = () => {
 const [showSuggestions, setShowSuggestions]= useState(false);
@@ -36,7 +37,7 @@ const [searchSuggesitons, setSearchSuggestions]= useState([]);
         <div className='flex col-span-1 p-1 items-center'>
           <img onClick={() => toggleMenuHandler()}
             className='h-5 cursor-pointer' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAARVBMVEX///8jHyAgHB0MAAUOBQikpKQpJSadnZ309PUAAAAIAADZ2Nj8/Pyop6cYExXBwMAtKSpta2xpZ2draWpfXV7BwcGvrq77CGWbAAABG0lEQVR4nO3cwXKCMBQFUApFTQAVtf3/Ty3tsKhLZpKSxnP+4M57JCwyt2kAAAAAAAAAAAAAAADgFQ1TX4ZpyJJvvIXYlSGGecyQcI5v5Yi39AGHsHeqJyH9ovYljXAZ4qeEm9W/pc29pCHmOGma8R7iexky3RbLovbHMvR5bnwAAAAAAAAAANhkPJUhV77hcT2U4frI8mToI5zbUpzDJX3A06Hd+7neL22X/mHbpbDXl+mHeOz2DvUk9skT1j/D+r/DZYiVn6UvcB9+2/tnZpUrHgAAAAAAAAAAbDBMe5ftrXK17M619yZq2f1bGfpLp5JGmKWDtv6E9W9p/SfNz22xdxn7Kl/LbuW9+gAAAAAAAAAAAAAAAPCffAHLSDTi5JU+gwAAAABJRU5ErkJggg==" alt="menu" />
-          <a href="/"><img className='h-5 mx-4' src="https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-png.png" alt="menu" /></a>
+          <img className='h-5 mx-4' src="https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-png.png" alt="menu" />
         </div>
 
         <div className='col-span-10 '>
