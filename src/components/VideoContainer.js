@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { YT_API } from '../utils/constants';
 import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
+import Shimmer, { oneShimmer } from './Shimmer';
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -13,14 +14,13 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(YT_API);
     const json = await data.json();
-    console.log(json.items);
+    // console.log(json.items);
     setVideos(json.items);
   }
 
-  return (
+  return !videos.length ? <div className="d-flex justify-content-center">{<Shimmer/>}</div> :(
     <>
       <div className='flex flex-wrap justify-evenly'>
-
         {
 
           videos.map(video => (
